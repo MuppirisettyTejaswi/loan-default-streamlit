@@ -3,9 +3,11 @@ import pandas as pd
 import joblib
 import plotly.express as px
 
-model = joblib.load("loan_default_app/model_training/loan_model.pkl")
-train_columns = joblib.load("loan_default_app/model_training/train_columns.pkl")
-train_mean = joblib.load("loan_default_app/model_training/train_mean.pkl")
+model = joblib.load("model_training/loan_model.pkl")
+train_columns = joblib.load("model_training/train_columns.pkl")
+train_mean = joblib.load("model_training/train_mean.pkl")
+
+
 
 
 st.title("Loan Default Risk Prediction")
