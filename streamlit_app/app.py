@@ -3,9 +3,9 @@ import pandas as pd
 import joblib
 import plotly.express as px
 
-model = joblib.load("../model_training/loan_model.pkl")
-train_columns = joblib.load("../model_training/train_columns.pkl")
-train_mean = joblib.load("../model_training/train_mean.pkl")
+model = joblib.load("model_training/loan_model.pkl")
+train_columns = joblib.load("model_training/train_columns.pkl")
+train_mean = joblib.load("model_training/train_mean.pkl")
 
 st.title("Loan Default Risk Prediction")
 st.markdown("Enter borrower information to predict the risk of loan default.")
@@ -28,7 +28,6 @@ input_data = {
 }
 input_df = pd.DataFrame([input_data])
 input_df = input_df[train_columns]
-
 
 st.subheader(" Input Summary")
 st.dataframe(input_df)
